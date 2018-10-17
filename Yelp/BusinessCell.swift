@@ -24,9 +24,17 @@ class BusinessCell: UITableViewCell {
     
     @IBOutlet weak var categoriesLabel: UILabel!
     
-    var business: Business!{
-        didSet {
+    var business: Business!
+    {
+        didSet
+        {
             nameLabel.text = business.name
+            thumbImageView.setImageWith(business.imageURL!)
+            categoriesLabel.text = business.categories
+            addressLabel.text = business.address
+            reviewCountLabel.text = "\(business.reviewCount!) Reviews"
+            ratingImageView.image = business.ratingImage
+            distanceLabel.text = business.distance
         }
     }
     
