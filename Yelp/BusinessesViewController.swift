@@ -63,6 +63,4 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 
         return cell
     }
-    
-    
 }
